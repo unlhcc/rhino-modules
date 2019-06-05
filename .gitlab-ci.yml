@@ -10,7 +10,7 @@ stages:
 
 test-modules:
   stage: test
-  image: unlhcc/crane-build-el6
+  image: unlhcc/rhino-build-el7
   except:
     - master
   tags:
@@ -24,7 +24,7 @@ test-modules:
 
 test-paths:
   stage: test
-  image: unlhcc/crane-build-el6
+  image: unlhcc/rhino-build-el7
   except:
     - master
   tags:
@@ -37,7 +37,7 @@ deploy:
   environment:
     name: rhino_production
     url: https://rhino.unl.edu
-  image: unlhcc/crane-build-el6
+  image: unlhcc/rhino-build-el7
   only:
     - master
   tags:
@@ -57,7 +57,7 @@ deploy:
 
 sync-to-github:
   stage: sync-to-github
-  image: unlhcc/crane-build-el6
+  image: unlhcc/rhino-build-el7
   tags:
     - docker
   allow_failure: yes
