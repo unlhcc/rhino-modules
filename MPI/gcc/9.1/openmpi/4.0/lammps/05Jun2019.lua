@@ -1,5 +1,5 @@
 local help_message = [[
-LAMMPS 06/05/2016
+LAMMPS 05Jun2019
 
 This module loads the lammps environment, built with the GCC
 compiler.
