@@ -21,7 +21,7 @@ prepend_path("LD_LIBRARY_PATH",     "/util/opt/netcdf-c/4.7/gcc/9.1/lib")
 prepend_path("MANPATH",             "/util/opt/netcdf-c/4.7/gcc/9.1/share/man")
 prepend_path("INCLUDE",             "/util/opt/netcdf-c/4.7/gcc/9.1/include")
 
-family("netcdf-c")
+family("netcdfc")
 
 prepend_path("CPATH",             "/util/opt/netcdf-c/4.7/gcc/9.1/include")
 prepend_path("LIBRARY_PATH",     "/util/opt/netcdf-c/4.7/gcc/9.1/lib")
