@@ -12,7 +12,7 @@ whatis("Name: netCDF C")
 whatis("Version: 4.7")
 whatis("Category: library, runtime support")
 whatis("Keywords: System, Library")
-whatis("URL: http://www.unidata.ucar.edu/downloads/netcdf-c/index.jsp")
+whatis("URL: https://www.unidata.ucar.edu/software/netcdf/docs/index.html")
 
 prepend_path("NETCDF",              "/util/opt/netcdf-c/4.7/intel/19")
 prepend_path("NCDIR",              "/util/opt/netcdf-c/4.7/intel/19")
