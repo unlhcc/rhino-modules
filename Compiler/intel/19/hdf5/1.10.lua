@@ -22,3 +22,4 @@ prepend_path("MANPATH",             "/util/opt/hdf5/1.10/intel/19/share/hdf5_exa
 prepend_path("INCLUDE",             "/util/opt/hdf5/1.10/intel/19/include")
 prepend_path("CPATH",               "/util/opt/hdf5/1.10/intel/19/include")
 prepend_path("LIBRARY_PATH",        "/util/opt/hdf5/1.10/intel/19/lib")
+setenv("HDF5", "/util/opt/hdf5/1.10/intel/19")
