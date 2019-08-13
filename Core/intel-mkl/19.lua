@@ -21,8 +21,7 @@ whatis("Description: Numerical library, contains blas/lapack")
 local cmpV     = "19"
 local composer = "parallel_studio_xe_2019"
 
-local mkl_base = pathJoin("/util/comp/intel/",cmpV,"mkl")
-local mkl_doc  = pathJoin("/util/comp/intel",cmpV,composer,"documentation_2019/en/mkl")
+local mkl_base = pathJoin("/util/opt/intel-mkl",cmpV,"mkl")
 
 prepend_path(   "MKLROOT",             mkl_base)
 prepend_path(   "INCLUDE",             pathJoin(mkl_base,"include"))
