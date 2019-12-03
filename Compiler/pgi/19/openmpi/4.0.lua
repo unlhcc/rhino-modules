@@ -28,7 +28,7 @@ prepend_path("LIBRARY_PATH",        "/util/opt/openmpi/4.0/pgi/19.5/lib")
 prepend_path("PKG_CONFIG_PATH",     "/util/opt/openmpi/4.0/pgi/19.5/lib/pkgconfig")
 
 local mroot = os.getenv("MODULEPATH_ROOT") or "/util/opt/modulefiles"
-local mdir = pathJoin(mroot,"MPI","pgi","19.5","openmpi","4.0")
+local mdir = pathJoin(mroot,"MPI","pgi","19","openmpi","4.0")
 prepend_path("MODULEPATH",          mdir)
 
 family("mpi")
