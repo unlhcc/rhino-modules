@@ -18,3 +18,8 @@ whatis("URL: http://www.simulia.com")
 prepend_path("PATH","/util/opt/abaqus/2021/Commands")
 setenv("TMI_CONFIG","/util/opt/abaqus/2021/linux_a64/code/bin/SMAExternal/impi/etc/tmi.conf")
 unsetenv("SLURM_GTIDS")
+
+-- By default Abaqus does hard linking as part of the post-simulation wrap-up. It tries to
+-- cross directories with the link which doesn't work on BeeGFS as it only supports hard
+-- links within the same directory. Setting this var disables that.
+setenv("SIM_SFD_NOCLEAN", "1")
