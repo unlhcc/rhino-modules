@@ -1,5 +1,5 @@
 local help_message = [[
-Intel MPI Compilers 19 (2019.4)
+Intel MPI Compilers 19 (2019.10)
 
 This module loads Intel MPI Compiler variables.
 The command directory is added to PATH.
@@ -19,11 +19,15 @@ whatis("URL: http://www.intel.com")
 prepend_path("PATH",                "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/bin")
 prepend_path("LD_LIBRARY_PATH",     "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/lib")
 prepend_path("LD_LIBRARY_PATH",     "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/lib/release")
+prepend_path("LD_LIBRARY_PATH",     "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/libfabric/lib")
 prepend_path("LIBRARY_PATH",        "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/lib")
 prepend_path("LIBRARY_PATH",        "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/lib/release")
+prepend_path("LIBRARY_PATH",        "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/libfabric/lib")
 prepend_path("MANPATH",             "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/man")
 prepend_path("INCLUDE",             "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/include")
 prepend_path("CPATH",               "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/include")
+prepend_path("FI_PROVIDER_PATH",    "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi/intel64/libfabric/lib/prov")
+prepend_path("FI_PROVIDER_PATH",    "/usr/lib64/libfabric")
 
 local mroot = os.getenv("MODULEPATH_ROOT") or "/util/opt/modulefiles"
 local mdir = pathJoin(mroot,"MPI","intel-mpi","19")
@@ -35,4 +39,5 @@ setenv("F90",	"mpiifort")
 setenv("F77",	"mpiifort")
 setenv("CXX",	"mpiicpc")
 
+setenv("I_MPI_ROOT", "/util/opt/intel-mpi/19/compilers_and_libraries_2020.4.317/linux/mpi")
 family("mpi")
