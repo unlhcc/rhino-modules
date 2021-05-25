@@ -1,5 +1,5 @@
 local help_message = [[
-Intel MPI Compilers 19 (2019.10)
+Intel MPI Compilers 19 (2019.4)
 
 This module loads Intel MPI Compiler variables.
 The command directory is added to PATH.
@@ -39,5 +39,5 @@ setenv("F90",	"mpiifort")
 setenv("F77",	"mpiifort")
 setenv("CXX",	"mpiicpc")
 
-setenv("I_MPI_ROOT", "/util/opt/intel-mpi/19/compilers_and_libraries_2020.4.317/linux/mpi")
+setenv("I_MPI_ROOT", "/util/opt/intel-mpi/19/compilers_and_libraries/linux/mpi")
 family("mpi")
