@@ -1,1 +1,2 @@
 hide-version openmpi/1.10
+hide-version openmpi/2.1
