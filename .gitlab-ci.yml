@@ -28,7 +28,7 @@ test-paths:
   except:
     - master
   tags:
-    - rhino-test
+    - rhino
   script:
     - scripts/test_changed_modules.sh
 
@@ -37,6 +37,7 @@ deploy:
   environment:
     name: rhino_production
     url: https://rhino.unl.edu
+  resource_group: production
   image: unlhcc/rhino-build-el7
   only:
     - master
