@@ -2,6 +2,7 @@ variables:
   WORK: "/tmp"
   LMOD_REDIRECT: "yes"
   MODULES_DIR: "/util/opt/modulefiles"
+  TF_LIST: "/util/opt/modulefiles/tensorflow_module_list.txt"
 
 stages:
   - test
@@ -54,3 +55,4 @@ deploy:
     - git checkout master
     - git fetch
     - git checkout $CI_COMMIT_SHA
+    - module use /util/opt/hcc-modules/Common && module -t avail tensorflow |& grep tensorflow 2>/dev/null > $TF_LIST
