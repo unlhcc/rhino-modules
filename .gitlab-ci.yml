@@ -58,4 +58,5 @@ deploy:
     - git checkout master
     - git fetch
     - git checkout $CI_COMMIT_SHA
+    - update_lmod_system_cache_files -d $MODULES_DIR/cacheDir -t $MODULES_DIR/cacheTS.txt $MODULES_DIR
     - module use /util/opt/hcc-modules/Common && module -t avail tensorflow |& grep tensorflow 2>/dev/null > $TF_LIST
