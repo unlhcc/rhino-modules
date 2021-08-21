@@ -2,6 +2,7 @@ variables:
   WORK: "/tmp"
   LMOD_REDIRECT: "yes"
   MODULES_DIR: "/util/opt/modulefiles"
+  LMOD_HOME: "/util/opt/lmod/lmod"
   TF_LIST: "/util/opt/modulefiles/tensorflow_module_list.txt"
 
 stages:
@@ -50,6 +51,8 @@ deploy:
     - echo $SSH_KNOWN_HOSTS > ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
     - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 --decode)
+    - source $LMOD_HOME/init/profile
+    - module load lmod
   script:
     - cd $MODULES_DIR
     - git checkout master
