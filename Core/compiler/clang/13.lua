@@ -16,6 +16,14 @@ whatis("Category: compiler")
 whatis("Keywords: System, compiler")
 whatis("URL: https://clang.llvm.org/index.html")
 
+
+-- On EL7 the system GCC is too old, so use v9 instead
+prepend_path("PATH",                "/util/comp/gcc/9/bin")
+prepend_path("LD_LIBRARY_PATH",     "/util/comp/gcc/9/lib")
+prepend_path("LD_LIBRARY_PATH",     "/util/comp/gcc/9/lib64")
+prepend_path("LIBRARY_PATH",     "/util/comp/gcc/9/lib")
+prepend_path("LIBRARY_PATH",     "/util/comp/gcc/9/lib64")
+
 prepend_path("PATH",                "/util/comp/clang/13/bin")
 prepend_path("LD_LIBRARY_PATH",     "/util/comp/clang/13/lib")
 prepend_path("LIBRARY_PATH",     "/util/comp/clang/13/lib")
