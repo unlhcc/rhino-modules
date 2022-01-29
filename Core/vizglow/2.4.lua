@@ -19,3 +19,11 @@ prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64/compiler"
 prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64/mkl")
 prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64/mpi")
 prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64")
+
+if mode() == "load" then
+  LmodMessage("-------------------------| Help message for VizGlow module |-------------------------------")
+  LmodMessage("PLEASE NOTE: VizGlow uses a wrapper script to run. Use this instead of mpirun/mpiexec.")
+  LmodMessage("Usage: vizglow_run.sh -d <project path> -n $SLURM_NTASKS -u")
+  LmodMessage("Replace <project path> with the full path to your VizGlow project directory.")
+  LmodMessage("------------------------------------------------------------------------------------------")
+end
