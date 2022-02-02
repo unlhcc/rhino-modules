@@ -19,6 +19,7 @@ prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64/compiler"
 prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64/mkl")
 prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64/mpi")
 prepend_path("LD_LIBRARY_PATH","/util/opt/vizglow/VizGlow_v2.4.1/lib64")
+setenv("LM_LICENSE_FILE", "/util/opt/vizglow/VizGlow_v2.4.1/licensing/esgeelm.lic")
 
 if mode() == "load" then
   LmodMessage("-------------------------| Help message for VizGlow module |-------------------------------")
