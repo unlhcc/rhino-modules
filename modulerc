@@ -1,3 +1,4 @@
 hide-version openmpi/1.10
 hide-version openmpi/2.1
 hide-version compiler/gcc/9.1
+hide-version asreml/4.1
